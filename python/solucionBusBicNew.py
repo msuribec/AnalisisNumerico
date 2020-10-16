@@ -30,7 +30,7 @@ def busquedasIncrementales(f, x, tol, iter_max):
                     converged = True
                     print (x1,' es raíz.')
                     break
-            else: 
+            else:
                 if fx * fx1 < 0:
                     print ('Hay una raíz entre ',x,' y ',x1, ', iteracion ==>>',i)
                     converged = True
@@ -78,10 +78,10 @@ def bisection(f, a, b, tol, iter_max):
                     break #% jumps out of the for loop
                     # % decide which half to keep , so that the signs at the ends differ
                 if fa * fxm < 0:
-                    b = xm 
+                    b = xm
                     fb = fxm
                 else:
-                    a = xm 
+                    a = xm
                     fa =fxm
                 xm = ( a + b )/2
                 fxm = f(xm)
@@ -93,7 +93,7 @@ def bisection(f, a, b, tol, iter_max):
             if fxm == 0:
                 print (xm,' es raíz.')
                 converged = True
-            else:     
+            else:
                 if er < tol:
                     print (xm,' es aproximación a una raíz con tolerancia ', tol)
                     converged = True
@@ -117,16 +117,16 @@ def newton(f, df, x0, tol, iter_max):
          iter: Used iterations
     converged: Found the root
     """
-    fx= f(x0)  
-    dfx= df(x0)  
+    fx= f(x0)
+    dfx= df(x0)
     er = tol + 1
     converged = False
 
-    for i in range(0, iter_max + 1):  
+    for i in range(0, iter_max + 1):
         x1 = x0 - (fx/dfx)
-        fx= f(x1)  
-        dfx= df(x1)  
-        er= math.fabs(x1 - x0) 
+        fx= f(x1)
+        dfx= df(x1)
+        er= math.fabs(x1 - x0)
         x0=x1
 
         print("i:{:03d} x: {:.10f} fx: {:.10f} error abs: {:.10f} \n"
@@ -136,10 +136,10 @@ def newton(f, df, x0, tol, iter_max):
             converged = True
             if math.fabs(fx) == 0 :
                 print (fx,' es raíz.')
-            else:     
+            else:
                 if er <= tol:
                     print (x1,' es aproximación a una raíz con tolerancia ', tol)
-                else:     
+                else:
                     if dfx == 0:
                         print (x1,' es una posible raíz multiple')
             break
