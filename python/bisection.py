@@ -1,5 +1,7 @@
-
-def bisection(f, a, b, tol, iter_max):
+import numpy as np
+import matplotlib.pyplot as plt
+import sympy as sp
+def bisection(x,f, a, b, tol, iter_max):
     """
     Calculates the root of an equation by Bisection method
     Parameters:
@@ -13,8 +15,11 @@ def bisection(f, a, b, tol, iter_max):
          iter: Used iterations
     converged: Found the root
     """
-    fa = f(a)
-    fb = f(b)
+
+    sp.plot(f, (x, a, b))
+
+    fa = f.subs(x,a)
+    fb = f.subs(x,b)
     if  fa == 0:
         print (a,' es raíz.')
     else:
@@ -23,11 +28,11 @@ def bisection(f, a, b, tol, iter_max):
         else:
             i=1
             xm = (a + b) / 2
-            fxm = f(xm)
+            fxm = f.subs(x,xm)
             er = b - a
             while i < iter_max and er > tol and fxm != 0:
                 print("i: {:03d} xi: {:+.10f} xm: {:+.10f} xf: {:+.10f} f(xi): {:+.10f} f(xm): {:+.10f} f(xf): {:+.10f} eabs: {:+.10f}\n"
-                .format(i, a, fa, xm, fxm, b, fb, er), end="")
+                .format(i, float(a), float(fa), float(xm), float(fxm), float(b), float(fb), float(er)), end="")
                 if fxm == 0.0: # % solved the equation exactly
                     a = xm
                     b = xm
@@ -40,11 +45,11 @@ def bisection(f, a, b, tol, iter_max):
                     a = xm
                     fa =fxm
                 xm = ( a + b )/2
-                fxm = f(xm)
+                fxm = f.subs(x,xm)
                 er = abs(b-a)
                 i = i+1
             print("i: {:03d} xi: {:+.10f} xm: {:+.10f} xf: {:+.10f} f(xi): {:+.10f} f(xm): {:+.10f} f(xf): {:+.10f} eabs: {:+.10f}\n"
-            .format(i, a, fa, xm, fxm, b, fb, er), end="")
+                .format(i, float(a), float(fa), float(xm), float(fxm), float(b), float(fb), float(er)), end="")
 
             if fxm == 0:
                 print (xm,' es raíz.')
@@ -55,5 +60,4 @@ def bisection(f, a, b, tol, iter_max):
                     converged = True
                 else:
                     print ('El método fracasó con ', i, ' iteraciones.')
-        root = xm
-        return [root, i, converged,fa, xm, fxm, fb, er]
+

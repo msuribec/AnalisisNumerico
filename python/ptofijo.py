@@ -1,34 +1,29 @@
-from sympy import *
+import sympy as sp
 
 #INPUT
-x=Symbol("x")
-f=eval(input("Ingrese la función f(x). Por ejemplo: x**3 -7.51*x**2+18.4239*x-14.8331\n"))
-g=eval(input("Ingrese la función g(x). Por ejemplo: x**3 -7.51*x**2+18.4239*x-14.8331\n"))
-x0=float(input("Ingrese el valor inicial\n"))
-nIterations=int(input("Ingrese el número máximo de iteraciones\n"))
-tolerance=float(input("Ingrese la tolerancia\n"))
 
-#METHOD SETUP
-fx=f.subs(x,x0)
-cont=1
-err=tolerance+1
-nCurrent=0
-print(". . .")
-
-#ITERATING
-while(fx!=0 and err>tolerance and cont<nIterations):
-    nCurrent=g.subs(x,x0)
-    fx=f.subs(x,nCurrent)
-    err=abs(nCurrent-x0)
-    x0=nCurrent
-    cont=cont+1
-
-if (fx==0):
-    print(x0,"Es raíz")
-else:
-    if(err<tolerance):
-        print(x0,"Es aproximación a una raíz con una tolerancia de,",tolerance)
+def puntofijo(x,f,g,x0,nIterations,tolerance):
+    # METHOD SETUP
+    fx = f.subs(x, x0)  # f(x0) [Evaluating]
+    cont = 0
+    err = tolerance + 1
+    inicial=x0
+    # ITERATING
+    while (fx != 0 and err > tolerance and cont < nIterations):
+        print("i:{:03d} x: {:.10f} fx: {:.10f} error abs: {:.10f} \n"
+              .format(cont, float(x0), float(fx), float(err)), end="")
+        xn = g.subs(x, x0)
+        fx = f.subs(x, xn)
+        err = abs(xn - x0)
+        x0 = xn
+        cont = cont + 1
+    print("i:{:03d} x: {:.10f} fx: {:.10f} error abs: {:.10f} \n"
+          .format(cont, float(x0), float(fx), float(err)), end="")
+    if (fx == 0):
+        print(x0, "Es raíz")
     else:
-        print("El método fracasó con",nIterations,"iteraciones")
-
-print("Finalizó en la iteración",cont)
+        if (err <= tolerance):
+            print(float(x0), "Es aproximación a una raíz con una tolerancia de,", tolerance)
+        else:
+            print("El método fracasó con", nIterations, "iteraciones")
+    sp.plot(f, (x, inicial, x0 + nIterations * tolerance))
