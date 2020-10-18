@@ -2,16 +2,14 @@
 Metodos numericos en Anaconda Python3.8.
 Author: Equipo analisis numerico
 """
-import math
 
-import matplotlib.pyplot as plt
 import sympy as sp
-import numpy as np
 import reglaFalsa
 import ptofijo
 import newton
 import bisection
 import busquedasInc
+import secant
 import raicesmult
 
 # x=Symbol("x")
@@ -95,6 +93,17 @@ def run_example_newton():
     x0 = 0.0
     newton.newton(x,f, x0, tol, iter_max)
 
+def run_example_secant():
+    print("\n\nSolucion: Secant")
+
+    x = sp.Symbol('x')
+    f=sp.exp(-x) - x
+    tol = 0.0005
+    iter_max = 100
+    x0 = 0.0
+    x1 = 1.0
+    secant.secant(x,f, x0, x1,iter_max,tol)
+
 
 def run_example_raices():
     x = sp.Symbol('x')
@@ -107,7 +116,7 @@ def run_example_raices():
 
 def main():
     """Ejecuta todos los ejemplos"""
-    run_example_busquedasIncrementales()
+    #run_example_busquedasIncrementales()
     #run_example_bisection()
 
     #run_example_RegFalsi()
@@ -115,7 +124,7 @@ def main():
     #run_example_newton()
     #run_example_ptofijo()
     #run_example_raices()
-
+    run_example_secant()
 
 
 if __name__ == '__main__':

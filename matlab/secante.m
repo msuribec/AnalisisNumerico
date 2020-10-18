@@ -19,7 +19,6 @@ if fx0==0
 else
     fx1=double(subs(f,x1));
     df=matlabFunction( diff(f(x)));
-    dfx=double(subs(df,x0));
     i=0;
     er=tol+1;
     den=fx1-fx0;
