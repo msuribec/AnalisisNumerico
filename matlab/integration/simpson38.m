@@ -1,0 +1,19 @@
+function [] = simpson38(f,x0,x3)
+    f0=f(x0);
+    f3=f(x3);
+    h = (x3 - x0) / 3;
+    x1=x0+h;
+    x2=x0+2*h;
+    f1=f(x1);
+    f2=f(x2);
+    val=(3*h/8)*(f0+3*f1+3*f2+f3);
+    fprintf("x0= %f\n",x0);
+    fprintf("x1= %f\n",x1);
+    fprintf("x2= %f\n",x2);
+    fprintf("x3= %f\n" ,x3);
+    fprintf("f(x0)= %f\n" ,f0);
+    fprintf("f(x1)= %f\n" ,f1);
+    fprintf("f(x2)= %f\n" ,f2);
+    fprintf("f(x3)= %f\n" ,f3);
+    fprintf('Estimation with simpson 3/8 method = %.15f \n', val);
+end

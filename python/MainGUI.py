@@ -2,11 +2,11 @@
 from sympy.parsing.sympy_parser import parse_expr
 import sympy as sp
 import oneVariableEquations.bisection as bisection
-import oneVariableEquations.reglaFalsa as regfalsi
 import oneVariableEquations.busquedasInc as incsearch
 import oneVariableEquations.newton as newton
 import oneVariableEquations.ptofijo as fixedpoint
 import oneVariableEquations.raicesmult as multroots
+import oneVariableEquations.reglaFalsa as regfalsi
 import oneVariableEquations.secant as secant
 
 
@@ -29,6 +29,9 @@ import linearSystems.iterativeMethods.gaussSeidel as gseidel
 import interpolation.vandermonde as vandermonde
 import interpolation.difDiv as difdiv
 import interpolation.lagrange as lagrange
+import interpolation.linearSpline as lspline
+import interpolation.quadraticSplines as qsplines
+import interpolation.cubicSplines as csplines
 class CustomError(object):
     pass
 
@@ -272,7 +275,6 @@ def startOneVarEqs(k):
         iter_max = getIntInput()
         newton.newton(x, f, x0, tol, iter_max)
     elif k==6: # secant
-        x = sp.Symbol('x')
         f = getSympyFunction()
         print('Enter x0:')
         x0 = getFloatInput()
@@ -304,6 +306,12 @@ def startInterpolation(k):
         difdiv.interpolate_newton(x,y)
     elif k == 3:  # lagrange
         lagrange.lagrange_pol(x,y)
+    elif k == 4:  # linear Spline
+        lspline.linearSplines(x,y)
+    elif k == 5:  # quadratic Splines
+        qsplines.solvequadsplines(x,y)
+    elif k == 6: # cubic splines
+        csplines.cubicSpline(x,y)
     else:
         print('That is not an accepted number')
 
@@ -342,6 +350,9 @@ def startInput():
             1 -- Vandermonde
             2 -- Divided differences (Newton's polynomial)
             3 -- Lagrange
+            4 -- Linear Splines
+            5 -- Quadratic splines
+            6 -- Cubic splines
             '''
         )
         ind2 = getIntInput()
