@@ -37,9 +37,6 @@ def crout(A,Scrolledtext1):
     return L, U
 
 def computing_final_solution(L,U,b,Scrolledtext1):
-    # Creating the L and U matrices using the specified algorithm
-
-    # Calling forward then backward substitution
 
     y = auxiliary.forward_substitution(L, b)
     x = auxiliary.backward_substitution(U, y)
@@ -58,7 +55,7 @@ def solveCrout(mat,coef,Scrolledtext1):
 
 
 
-if __name__ == "__main__":
-    A = [[6, 6, 6], [4, 25, 6], [6, 9, 1]]
-    b = [1, 1, 1]
-    solveCrout(A,b)
+# if __name__ == "__main__":
+#     A = [[6, 6, 6], [4, 25, 6], [6, 9, 1]]
+#     b = [1, 1, 1]
+#     solveCrout(A,b)

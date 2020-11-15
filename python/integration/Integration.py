@@ -1,7 +1,4 @@
 import numpy as np
-import sympy as sp
-from sympy.abc import x
-
 
 def trapzComp(f, a, b, N=50):
     data = np.linspace(a, b, N + 1)  # N+1 points make N subintervals
@@ -76,12 +73,12 @@ def simpson38(f,x0,x3):
 
 
 
-if __name__ == '__main__':
-    expr = sp.exp(x) - 2 * x
-    f = sp.lambdify(x, expr, "numpy")
-
-    trapzComp(f, 1, 2, 10)
-    trapz(f, 1, 2)
-    simps(f,1,2)
-    simpsComp(f, 1, 2, 10)
-    simpson38(f,1,2)
+# if __name__ == '__main__':
+#     expr = sp.exp(x) - 2 * x
+#     f = sp.lambdify(x, expr, "numpy")
+#
+#     trapzComp(f, 1, 2, 10)
+#     trapz(f, 1, 2)
+#     simps(f,1,2)
+#     simpsComp(f, 1, 2, 10)
+#     simpson38(f,1,2)

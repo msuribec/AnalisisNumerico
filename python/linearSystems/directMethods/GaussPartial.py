@@ -1,5 +1,4 @@
-# The 'gauss' function takes two matrices, 'a' and 'b', with 'a' square, and it return the determinant of 'a' and a matrix 'x' such that a*x = b.
-# If 'b' is the identity, then 'x' is the inverse of 'a'.
+
 import linearSystems.directMethods.auxiliary as auxiliary
 import copy
 import numpy as np
@@ -75,19 +74,6 @@ def gauss(A,b,Scrolledtext1):
 def zeromat(p, q):
     return [[0] * q for i in range(p)]
 
-
-# def matmul(a, b):
-#     n, p = len(a), len(a[0])
-#     p1, q = len(b), len(b[0])
-#     if p != p1:
-#         raise ValueError("Incompatible dimensions")
-#     c = zeromat(n, q)
-#     for i in range(n):
-#         for j in range(q):
-#             c[i][j] = sum(a[i][k] * b[k][j] for k in range(p))
-#     return c
-
-
 def mapmat(f, a):
     return [list(map(f, v)) for v in a]
 
@@ -98,8 +84,8 @@ def solveGaussPartial(A,coef,Scrolledtext1):
     b=auxiliary.from_vector(coef)
     det, c = gauss(A, b,Scrolledtext1)
 
-if __name__ == '__main__':
-    A = [[-7, 2, -3, 4], [5, -1, 14, -1], [1, 9, -7, 5], [-12, 13, -8, -4]]
-    b = [-12, 13, 31, -32]
-    solveGaussPartial(A,b)
-
+# if __name__ == '__main__':
+#     A = [[-7, 2, -3, 4], [5, -1, 14, -1], [1, 9, -7, 5], [-12, 13, -8, -4]]
+#     b = [-12, 13, 31, -32]
+#     solveGaussPartial(A,b)
+#

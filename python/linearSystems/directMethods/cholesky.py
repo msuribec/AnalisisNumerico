@@ -15,14 +15,8 @@ except ImportError:
     py3 = True
 
 
-import pprint
-import scipy
-import scipy.linalg   # SciPy Linear Algebra Library
-
 def chol(A,Scrolledtext1):
-    """Performs a Cholesky decomposition of A, which must
-    be a symmetric and positive definite matrix. The function
-    returns the lower variant triangular matrix, L."""
+
     n = len(A)
 
     # Create zero matrix for L
@@ -60,7 +54,6 @@ def chol(A,Scrolledtext1):
         Scrolledtext1.insert(tk.INSERT, U)
     Scrolledtext1.insert(tk.INSERT,'\nPHASE %d:\n' % (i + 2))
 
-
     productS = 0
     for k  in range(0,n - 1):
         productS = productS + L[n - 1][k]* U[k][n - 1]
@@ -77,9 +70,6 @@ def chol(A,Scrolledtext1):
 
 
 def computing_final_solution(L,U,b,Scrolledtext1):
-    # Creating the L and U matrices using the specified algorithm
-
-    # Calling forward then backward substitution
 
     y = auxiliary.forward_substitution(L, b)
     x = auxiliary.backward_substitution(U, y)
@@ -87,7 +77,6 @@ def computing_final_solution(L,U,b,Scrolledtext1):
     Scrolledtext1.insert(tk.INSERT,"\ny = " + str(y) + "\n")
     Scrolledtext1.insert(tk.INSERT,'\nSolving Ux=z by backward substitution, we get\n')
     Scrolledtext1.insert(tk.INSERT,"x = " + str(x) + "\n")
-    # Returning the solution vector x
     return x
 
 def solveChol(mat,coef,Scrolledtext1):
@@ -98,7 +87,7 @@ def solveChol(mat,coef,Scrolledtext1):
 
 
 
-if __name__ == "__main__":
-    A = [[20, -1, 3,4], [6, 23, 4,3], [7,21, 46, 9],[-3,-9,12,38]]
-    b = [1, 1, 1,1]
-    solveChol(np.array(A),np.array(b))
+# if __name__ == "__main__":
+#     A = [[20, -1, 3,4], [6, 23, 4,3], [7,21, 46, 9],[-3,-9,12,38]]
+#     b = [1, 1, 1,1]
+#     solveChol(np.array(A),np.array(b))

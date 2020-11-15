@@ -1,10 +1,3 @@
-"""
-Implementation of the Gaussian Elimination Algorithm for finding the row-reduced echelon form of a given matrix.
-No pivoting is done.
-Requires Python 3 due to the different behaviour of the division operation in earlier versions of Python.
-Released under the Public Domain (if you want it - you probably don't)
-"""
-
 try:
     import Tkinter as tk
 except ImportError:

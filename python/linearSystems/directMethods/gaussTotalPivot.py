@@ -85,8 +85,8 @@ def solveGaussT(mat,coef,Scrolledtext1):
     GaussTotal(A,b,Scrolledtext1)
 
 
-if __name__ == '__main__':
-    mat = [[-1, 1, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0], [0, 0, 0, 0, 4, 1], [1, 1, -1, -1, 0, 0], [0, 0, 2, 1, -2, -1]]
-    coef = [7,-1,-8,2,0,0]
-    solveGaussT(mat,coef)
+# if __name__ == '__main__':
+#     mat = [[-1, 1, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0], [0, 0, 0, 0, 4, 1], [1, 1, -1, -1, 0, 0], [0, 0, 2, 1, -2, -1]]
+#     coef = [7,-1,-8,2,0,0]
+#     solveGaussT(mat,coef)
 

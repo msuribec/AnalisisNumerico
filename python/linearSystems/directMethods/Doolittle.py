@@ -45,17 +45,12 @@ def doolittle(A,Scrolledtext1):
 
 
 def computing_final_solution(L,U,b,Scrolledtext1):
-    # Creating the L and U matrices using the specified algorithm
-
-    # Calling forward then backward substitution
-
     y = auxiliary.forward_substitution(L, b)
     x = auxiliary.backward_substitution(U, y)
     Scrolledtext1.insert(tk.INSERT,'\nsolving Lz=b by forward substitution, we get\n')
     Scrolledtext1.insert(tk.INSERT,"y = " + str(y) + "\n")
     Scrolledtext1.insert(tk.INSERT,'\nSolving Ux=z by backward substitution, we get\n')
     Scrolledtext1.insert(tk.INSERT,"x = " + str(x) + "\n")
-    # Returning the solution vector x
     return x
 
 def solveDoolittle(mat,coef,Scrolledtext1):
@@ -64,7 +59,7 @@ def solveDoolittle(mat,coef,Scrolledtext1):
     L, U = doolittle(A,Scrolledtext1)
     computing_final_solution(L,U,b,Scrolledtext1)
 
-if __name__ == "__main__":
-    A = [[4, -1, 0,3], [1, 15.5, 3,8], [0, -1.3,-4 ,1.1], [14, 5,-2 ,30]]
-    b = [1, 1, 1, 1]
-    solveDoolittle(A,b)
+# if __name__ == "__main__":
+#     A = [[4, -1, 0,3], [1, 15.5, 3,8], [0, -1.3,-4 ,1.1], [14, 5,-2 ,30]]
+#     b = [1, 1, 1, 1]
+#     solveDoolittle(A,b)

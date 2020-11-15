@@ -47,9 +47,9 @@ def vanderMondeGUI(x,y,Scrolledtext1):
     sol=np.linalg.solve(np.array(V),np.array(y))
     Scrolledtext1.insert(tk.INSERT, sol)
 
-if __name__ == '__main__':
-    # x = [-2.0, -1.0, 2.0,3.0]
-    # y = [12.13533528,6.367879441,-4.610943901,2.085536923]
-    x = [1.0, 2.0, 3.0]
-    y = [1.0 ,4.0 ,9.0]
-    vanderMonde(x,y)
+# if __name__ == '__main__':
+#     # x = [-2.0, -1.0, 2.0,3.0]
+#     # y = [12.13533528,6.367879441,-4.610943901,2.085536923]
+#     x = [1.0, 2.0, 3.0]
+#     y = [1.0 ,4.0 ,9.0]
+#     vanderMonde(x,y)

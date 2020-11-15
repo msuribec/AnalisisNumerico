@@ -64,10 +64,10 @@ def solveGaussSeidel(mat,coef,initial,tol,itemax,Scrolledtext1):
     A = aux.reshape(n, n)
     gausSeidel(A, b, initial, tol, itemax,Scrolledtext1)
 
-if __name__ == "__main__":
-    tind = [-25, 82, 75, -43]
-    mat = [[45, 13, -4, 8], [-5, -28, 4, -14], [9, 15, 63, -7], [2, 3, -8, -42]]
-    x = [2, 2, 2, 2]
-    solveGaussSeidel(mat,tind,x,1E-7,1000)
+# if __name__ == "__main__":
+#     tind = [-25, 82, 75, -43]
+#     mat = [[45, 13, -4, 8], [-5, -28, 4, -14], [9, 15, 63, -7], [2, 3, -8, -42]]
+#     x = [2, 2, 2, 2]
+#     solveGaussSeidel(mat,tind,x,1E-7,1000)
 
 

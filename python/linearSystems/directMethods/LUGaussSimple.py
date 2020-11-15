@@ -1,3 +1,13 @@
+"""
+    LU factorization without pivoting
+
+    In order to minimize space, the original coefficient matrix A is used to store the
+    multipliers and (elements of L ) and the elements of U
+
+    At the end of the method the
+    U= upper(A)
+    and L =lower(A)
+"""
 import numpy as np
 import linearSystems.directMethods.auxiliary as auxiliary
 
@@ -15,16 +25,7 @@ except ImportError:
 
     py3 = True
     
-"""
-    LU factorization without pivoting
 
-    In order to minimize space, the original coefficient matrix A is used to store the
-    multipliers and (elements of L ) and the elements of U
-
-    At the end of the method the 
-    U= upper(A)
-    and L =lower(A)
-"""
 
 def luFactor(A,b,Scrolledtext1):
 
@@ -62,10 +63,10 @@ def solveLUSimple(mat,coef,Scrolledtext1):
     x = luFactor(A, b,Scrolledtext1)
     Scrolledtext1.insert(tk.INSERT,x)
 
-if __name__ == '__main__':
-    coef = [-12, 13, 31, -32]
-    mat = [[-7, 2, -3, 4], [5, -1, 14, -1], [1, 9, -7, 13], [-12, 13, -8, -4]]
-    # mat = [-7, 2, -3, 4, 5, -1, 14, -1, 1, 9, -7, 5, -12, 13, -8, -4]
-
-    solveLUSimple(mat,coef)
+# if __name__ == '__main__':
+#     coef = [-12, 13, 31, -32]
+#     mat = [[-7, 2, -3, 4], [5, -1, 14, -1], [1, 9, -7, 13], [-12, 13, -8, -4]]
+#     # mat = [-7, 2, -3, 4, 5, -1, 14, -1, 1, 9, -7, 5, -12, 13, -8, -4]
+#
+#     solveLUSimple(mat,coef)
 

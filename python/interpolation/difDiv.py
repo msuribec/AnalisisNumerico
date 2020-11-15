@@ -13,11 +13,9 @@ except ImportError:
 from numpy import *
 
 
-# Newton’s Divided difference, produces coefficients of
-# interpolating polynomial
+
 def divDiffNewton(x, y):
     n = len(x)
-    # Construct table and load xy pairs in first columns
     A = zeros((n, n + 1))
     A[:, 0] = x[:]
     A[:, 1] = y[:]
@@ -52,8 +50,8 @@ def interpolate_newtonGUI(x,y,Scrolledtext1):
 
 
 
-if __name__ == "__main__":
-    x = [1, 1.2, 1.4, 1.6, 1.8, 2]
-    y = [0.6747, 0.8491, 1.1214, 1.4921, 1.9607, 2.5258]
-    str=interpolate_newton(x,y)
-    print(str)
+# if __name__ == "__main__":
+#     x = [1, 1.2, 1.4, 1.6, 1.8, 2]
+#     y = [0.6747, 0.8491, 1.1214, 1.4921, 1.9607, 2.5258]
+#     str=interpolate_newton(x,y)
+#     print(str)

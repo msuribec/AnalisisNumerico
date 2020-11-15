@@ -1,3 +1,16 @@
+"""
+    LU factorization with partial pivoting
+
+    In order to minimize space, the original coefficient matrix A is used to store the
+    multipliers and (elements of L ) and the elements of U
+
+    At the end of the method the
+    U= upper(A)
+    and L =lower(A)
+
+    marks is the array that stores row changes
+"""
+
 import numpy as np
 import linearSystems.directMethods.auxiliary as auxiliary
 
@@ -15,18 +28,7 @@ except ImportError:
 
     py3 = True
     
-"""
-    LU factorization with partial pivoting
-    
-    In order to minimize space, the original coefficient matrix A is used to store the
-    multipliers and (elements of L ) and the elements of U
-    
-    At the end of the method the 
-    U= upper(A)
-    and L =lower(A)
-    
-    marks is the array that stores row changes
-"""
+
 def luFactorPartial(A,b,Scrolledtext1):
 
     n = A.shape[0]
@@ -68,8 +70,8 @@ def solveLUGaussPartial(mat,coef,Scrolledtext1):
 
 
 
-if __name__ == '__main__':
-    coef = [-12, 13, 31, -32]
-    mat = [[-7, 2, -3, 4], [5, -1, 14, -1], [1, 9, -7, 13], [-12, 13, -8, -4]]
-    solveLUGaussPartial(mat,coef)
-
+# if __name__ == '__main__':
+#     coef = [-12, 13, 31, -32]
+#     mat = [[-7, 2, -3, 4], [5, -1, 14, -1], [1, 9, -7, 13], [-12, 13, -8, -4]]
+#     solveLUGaussPartial(mat,coef)
+#

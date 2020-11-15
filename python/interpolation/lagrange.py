@@ -80,7 +80,7 @@ def lagrange_polGUI(x, y,Scrolledtext1):
 
     Scrolledtext1.insert(tk.INSERT, poly)
     return poly
-if __name__ == "__main__":
-    x = [-1, 1, 2, 4 ]
-    y = [7, -1, -8, 2]
-    lagrange_pol(x,y)
+# if __name__ == "__main__":
+#     x = [-1, 1, 2, 4 ]
+#     y = [7, -1, -8, 2]
+#     lagrange_pol(x,y)

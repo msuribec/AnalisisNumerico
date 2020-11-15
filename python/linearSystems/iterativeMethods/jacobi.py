@@ -78,8 +78,8 @@ def solveJacobi(mat,coef,initial,tol,maxit,Scrolledtext1):
     x=np.array(initial,dtype=float)
     jacobi(A, b, x, tol, maxit,Scrolledtext1)
 
-if __name__ == "__main__":
-    tind = [-25, 82, 75, -43]
-    mat = [[45, 13, -4, 8], [-5, -28, 4, -14], [9, 15, 63, -7], [2, 3, -8, -42]]
-    x = [2, 2, 2, 2]
-    solveJacobi(mat,tind,x,1E-7,1000)
+# if __name__ == "__main__":
+#     tind = [-25, 82, 75, -43]
+#     mat = [[45, 13, -4, 8], [-5, -28, 4, -14], [9, 15, 63, -7], [2, 3, -8, -42]]
+#     x = [2, 2, 2, 2]
+#     solveJacobi(mat,tind,x,1E-7,1000)
