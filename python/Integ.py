@@ -182,20 +182,6 @@ class Toplevel1:
                                                                                    self.valueaEntry, self.valuebEntry,
                                                                                    self.resultMessage,self.intervalsEntry))
 
-        self.gobackButton = tk.Button(top)
-        self.gobackButton.place(relx=0.383, rely=0.867, height=33, width=126)
-        self.gobackButton.configure(activebackground="#ececec")
-        self.gobackButton.configure(activeforeground="#000000")
-        self.gobackButton.configure(background="#acd5d1")
-        self.gobackButton.configure(disabledforeground="#a3a3a3")
-        self.gobackButton.configure(font="-family {Segoe UI Black} -size 9 -weight bold")
-        self.gobackButton.configure(foreground="#ffffff")
-        self.gobackButton.configure(highlightbackground="#d9d9d9")
-        self.gobackButton.configure(highlightcolor="black")
-        self.gobackButton.configure(pady="0")
-        self.gobackButton.configure(relief="flat")
-        self.gobackButton.configure(text='''GO BACK''')
-
         self.intervalsEntry = tk.Entry(top)
         self.intervalsEntry.place(relx=0.35, rely=0.511, height=24
                 , relwidth=0.173)

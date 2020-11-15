@@ -9,9 +9,6 @@ import sys
 import interpolation.vandermonde as vandermonde
 import interpolation.difDiv as difdiv
 import interpolation.lagrange as lagrange
-import interpolation.linearSpline as lspline
-import interpolation.quadraticSplines as qsplines
-import interpolation.cubicSplines as csplines
 try:
     import Tkinter as tk
 except ImportError:

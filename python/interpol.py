@@ -141,20 +141,6 @@ class Toplevel1:
         self.runButton.bind('<ButtonRelease-1>', lambda e: interpol_support.runMethod(self.choiceInteg, self.xEntry,
                                self.yEntry, self.Scrolledtext1))
 
-        self.gobackButton = tk.Button(top)
-        self.gobackButton.place(relx=0.383, rely=0.867, height=33, width=126)
-        self.gobackButton.configure(activebackground="#ececec")
-        self.gobackButton.configure(activeforeground="#000000")
-        self.gobackButton.configure(background="#acd5d1")
-        self.gobackButton.configure(disabledforeground="#a3a3a3")
-        self.gobackButton.configure(font="-family {Segoe UI Black} -size 9 -weight bold")
-        self.gobackButton.configure(foreground="#ffffff")
-        self.gobackButton.configure(highlightbackground="#d9d9d9")
-        self.gobackButton.configure(highlightcolor="black")
-        self.gobackButton.configure(pady="0")
-        self.gobackButton.configure(relief="flat")
-        self.gobackButton.configure(text='''GO BACK''')
-
         self.Label1_1 = tk.Label(top)
         self.Label1_1.place(relx=0.217, rely=0.311, height=26, width=58)
         self.Label1_1.configure(activebackground="#f9f9f9")

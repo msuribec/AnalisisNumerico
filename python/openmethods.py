@@ -170,19 +170,6 @@ class Toplevel1:
                             lambda e: openmethods_support.runMethod(self.choiceInteg, self.fEntry,self.gEntry_1,
                                                                   self.x0Entry,self.x1Entry,self.iterationsEntry,self.tolEntry,self.Scrolledtext1))
 
-        self.gobackButton = tk.Button(top)
-        self.gobackButton.place(relx=0.444, rely=0.9, height=33, width=126)
-        self.gobackButton.configure(activebackground="#ececec")
-        self.gobackButton.configure(activeforeground="#000000")
-        self.gobackButton.configure(background="#acd5d1")
-        self.gobackButton.configure(disabledforeground="#a3a3a3")
-        self.gobackButton.configure(font="-family {Segoe UI Black} -size 9 -weight bold")
-        self.gobackButton.configure(foreground="#ffffff")
-        self.gobackButton.configure(highlightbackground="#d9d9d9")
-        self.gobackButton.configure(highlightcolor="black")
-        self.gobackButton.configure(pady="0")
-        self.gobackButton.configure(relief="flat")
-        self.gobackButton.configure(text='''GO BACK''')
 
         self.iterationsEntry = tk.Entry(top)
         self.iterationsEntry.place(relx=0.266, rely=0.375, height=24

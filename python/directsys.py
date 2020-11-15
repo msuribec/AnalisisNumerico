@@ -154,21 +154,6 @@ class Toplevel1:
         self.runButton.bind('<ButtonRelease-1>',
                             lambda e: directsys_support.runMethod(self.choiceInteg, self.matrixEntry,
                                                                   self.vectorEntry, self.Scrolledtext1))
-
-        self.gobackButton = tk.Button(top)
-        self.gobackButton.place(relx=0.383, rely=0.867, height=33, width=126)
-        self.gobackButton.configure(activebackground="#ececec")
-        self.gobackButton.configure(activeforeground="#000000")
-        self.gobackButton.configure(background="#acd5d1")
-        self.gobackButton.configure(disabledforeground="#a3a3a3")
-        self.gobackButton.configure(font="-family {Segoe UI Black} -size 9 -weight bold")
-        self.gobackButton.configure(foreground="#ffffff")
-        self.gobackButton.configure(highlightbackground="#d9d9d9")
-        self.gobackButton.configure(highlightcolor="black")
-        self.gobackButton.configure(pady="0")
-        self.gobackButton.configure(relief="flat")
-        self.gobackButton.configure(text='''GO BACK''')
-
         self.Scrolledtext1 = ScrolledText(top)
         self.Scrolledtext1.place(relx=0.467, rely=0.489, relheight=0.307
                                  , relwidth=0.382)

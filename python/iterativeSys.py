@@ -146,21 +146,7 @@ class Toplevel1:
         self.runButton.bind('<ButtonRelease-1>',
                             lambda e: iterativeSys_support.runMethod(self.choiceInteg, self.matrixEntry,
                                                                      self.vectorEntry, self.initialEntry,self.iterationsEntry,
-                                                                     self.tolEntry, self.Scrolledtext1))
-
-        self.gobackButton = tk.Button(top)
-        self.gobackButton.place(relx=0.35, rely=0.918, height=33, width=126)
-        self.gobackButton.configure(activebackground="#ececec")
-        self.gobackButton.configure(activeforeground="#000000")
-        self.gobackButton.configure(background="#acd5d1")
-        self.gobackButton.configure(disabledforeground="#a3a3a3")
-        self.gobackButton.configure(font="-family {Segoe UI Black} -size 9 -weight bold")
-        self.gobackButton.configure(foreground="#ffffff")
-        self.gobackButton.configure(highlightbackground="#d9d9d9")
-        self.gobackButton.configure(highlightcolor="black")
-        self.gobackButton.configure(pady="0")
-        self.gobackButton.configure(relief="flat")
-        self.gobackButton.configure(text='''GO BACK''')
+                                                                     self.tolEntry, self.Scrolledtext1) )
 
         self.iterationsEntry = tk.Entry(top)
         self.iterationsEntry.place(relx=0.35, rely=0.34, height=24
