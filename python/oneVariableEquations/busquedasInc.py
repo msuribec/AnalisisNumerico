@@ -41,9 +41,9 @@ def busquedasIncrementales(x,f, x0, tol, n,Scrolledtext1):
             else:
                 Scrolledtext1.insert(tk.INSERT, '%f es raíz.'%f)
         elif fx * fx1 < 0:
-            Scrolledtext1.insert('Hay una raíz entre '+ str(float(x0)) +' y ' + str(float(x1)) +  ', iteracion ==>>' + str(i))
+            Scrolledtext1.insert(tk.INSERT,'Hay una raíz entre %.15f y %.15f, iteracion %d'%(x0,x1,i))
         else:
-            Scrolledtext1.insert(tk.INSERT,'El método fracasó con '+ str(iter_max) +  ' iteraciones.')
+            Scrolledtext1.insert(tk.INSERT,'El método fracasó con %d iteraciones.'%i)
 
 
         sp.plot(f, (x, inicial, x1 + n * tol))

@@ -203,6 +203,25 @@ class Toplevel1:
         self.Label3_1.configure(highlightcolor="black")
         self.Label3_1.configure(text='''Number of intervals N''')
 
+        self.choiceInteg.bind("<<ComboboxSelected>>", lambda event: Cat_callback(self))
+
+
+def Cat_callback(self, event=None):
+    k = self.choiceInteg.get()
+    ops = ['trapezoid','trapezoid generalized','simpson 1/3','simpson 1/3 generalized','simpson 3/8',]
+    if k == ops[0]:
+        self.intervalsEntry.config(state='disabled')
+    elif k == ops[1]:
+        self.intervalsEntry.config(state='normal')
+    elif k == ops[2]:
+        self.intervalsEntry.config(state='disabled')
+    elif k == ops[3]:
+        self.intervalsEntry.config(state='normal')
+    elif k == ops[4]:
+        self.intervalsEntry.config(state='disabled')
+
+
+
 if __name__ == '__main__':
     vp_start_gui()
 

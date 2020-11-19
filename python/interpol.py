@@ -76,7 +76,7 @@ class Toplevel1:
         top.minsize(148, 1)
         top.maxsize(1924, 1055)
         top.resizable(1,  1)
-        top.title("Integration")
+        top.title("Interpolation")
         top.configure(background="#ffffff")
         top.configure(highlightbackground="#d9d9d9")
         top.configure(highlightcolor="black")

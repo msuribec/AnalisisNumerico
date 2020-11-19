@@ -255,6 +255,9 @@ class Toplevel1:
         self.Label1_1.configure(highlightcolor="black")
         self.Label1_1.configure(text='''Function g''')
 
+        self.choiceInteg.bind("<<ComboboxSelected>>", lambda event: Cat_callback(self))
+
+
 # The following code is added to facilitate the Scrolled widgets you specified.
 class AutoScroll(object):
     '''Configure the scrollbars for a widget.'''
@@ -367,6 +370,28 @@ def _on_shiftmouse(event, widget):
             widget.xview_scroll(-1, 'units')
         elif event.num == 5:
             widget.xview_scroll(1, 'units')
+
+
+def Cat_callback(self, event=None):
+    k = self.choiceInteg.get()
+    ops = ['Fixed Point', 'Newton', 'Secant', 'Multiple roots', 'Incremental searches', ]
+    if k == ops[0]:
+        self.x1Entry.config(state='disabled')
+        self.gEntry_1.config(state='normal')
+    elif k == ops[1]:
+        self.x1Entry.config(state='disabled')
+        self.gEntry_1.config(state='disabled')
+    elif k == ops[2]:
+        self.x1Entry.config(state='normal')
+        self.gEntry_1.config(state='disabled')
+    elif k == ops[3]:
+        self.x1Entry.config(state='disabled')
+        self.gEntry_1.config(state='disabled')
+    elif k == ops[4]:
+        self.x1Entry.config(state='disabled')
+        self.gEntry_1.config(state='disabled')
+
+
 
 if __name__ == '__main__':
     vp_start_gui()
