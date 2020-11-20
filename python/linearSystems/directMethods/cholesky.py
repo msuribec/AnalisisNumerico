@@ -22,8 +22,6 @@ def chol(A,Scrolledtext1):
     # Create zero matrix for L
     L = np.eye(n)
     U = np.eye(n)
-    Scrolledtext1.insert(tk.INSERT,A)
-    Scrolledtext1.insert(tk.INSERT,L)
     i=0
     for i in range(n-1):
         Scrolledtext1.insert(tk.INSERT,'\nPHASE %d\n'%(i+1))
@@ -31,7 +29,7 @@ def chol(A,Scrolledtext1):
         for k in range(i):
             sum1 = sum1 + L[i][k] * U[k][i]
 
-        L[i][i]=sqrt(A[i][i]-sum1)
+        L[i][i]=np.sqrt(A[i][i]-sum1)
         U[i][i] = L[i][i]
         for j in range(i+1,n):
             sum2=0
@@ -58,7 +56,7 @@ def chol(A,Scrolledtext1):
     for k  in range(0,n - 1):
         productS = productS + L[n - 1][k]* U[k][n - 1]
 
-    L[n - 1][n - 1] = sqrt(A[n - 1][n - 1] - productS)
+    L[n - 1][n - 1] = np.sqrt(A[n - 1][n - 1] - productS)
     U[n - 1][n - 1] = L[n - 1][n - 1]
 
     Scrolledtext1.insert(tk.INSERT,'\nThe L matrix at this iteration is:\n')

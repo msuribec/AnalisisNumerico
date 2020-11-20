@@ -29,7 +29,7 @@ except ImportError:
     py3 = True
     
 
-def luFactorPartial(A,b,Scrolledtext1):
+def luFactorPartial(A,Scrolledtext1):
 
     n = A.shape[0]
     Scrolledtext1.insert(tk.INSERT,'\nOriginal Matrix: \n')
@@ -41,23 +41,21 @@ def luFactorPartial(A,b,Scrolledtext1):
         maxrow = np.argmax(abs(A[k:n,k])) + k
         marks[[k,maxrow]] = marks[[maxrow,k]]
         A[[k,maxrow]] = A[[maxrow,k]]
+        Scrolledtext1.insert(tk.INSERT, 'The matrix after pivoting:\n')
+        Scrolledtext1.insert(tk.INSERT, A)
         # LU
         for i in range(k+1,n):
             A[i,k] = A[i,k]/A[k,k]
-            Scrolledtext1.insert(tk.INSERT,'L(%d , %d) = %f \n' % (i, k, A[i, k]))
+            Scrolledtext1.insert(tk.INSERT,'\n L(%d , %d) = %f \n' % (i, k, A[i, k]))
             for j in range(k+1,n):
                 A[i,j] -= A[i,k]*A[k,j]
                 Scrolledtext1.insert(tk.INSERT,'U(%d,%d) = %f \n' % (i, j, A[i, j]))
 
-    Scrolledtext1.insert(tk.INSERT,'\nThe final L matrix is\n:')
-    Scrolledtext1.insert(tk.INSERT,np.tril(A))
-    Scrolledtext1.insert(tk.INSERT,'\nThe final U matrix is\n:')
-    Scrolledtext1.insert(tk.INSERT,np.triu(A))
-    LU=A
-    b = b[marks]
-    y = auxiliary.forwarsRows(LU, b)
-    x = auxiliary.backwardsRows(LU, y)
-    return x
+    Scrolledtext1.insert(tk.INSERT,'\nThe final matrix (elements above the diagonal are L and below are U)\n:')
+    Scrolledtext1.insert(tk.INSERT,np.array(A))
+
+    return [A,marks]
+
 
 
 
@@ -65,8 +63,14 @@ def solveLUGaussPartial(mat,coef,Scrolledtext1):
     aux = auxiliary.from_vector(coef)
     b=np.array(aux,dtype=float)
     A=np.array(mat,dtype=float)
-    x=luFactorPartial(A,b,Scrolledtext1)
-    Scrolledtext1.insert(tk.INSERT,x)
+    LU, piv = luFactorPartial(A,Scrolledtext1)
+    b = b[piv]
+    y = auxiliary.ufsub(LU, b)
+
+    x = auxiliary.bsub(LU, y)
+    Scrolledtext1.insert(tk.INSERT, '\nThe solution vector is\n:')
+    Scrolledtext1.insert(tk.INSERT, np.array(x))
+
 
 
 

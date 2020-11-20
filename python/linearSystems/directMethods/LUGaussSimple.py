@@ -43,16 +43,10 @@ def luFactor(A,b,Scrolledtext1):
                 A[i,j] -= A[i,k]*A[k,j] # " U[i,j] -= L[i,k]*A[k,j] "
                 Scrolledtext1.insert(tk.INSERT,'\nU(%d,%d) = %f \n' % (i,j, A[i, j]))
 
-    Scrolledtext1.insert(tk.INSERT,'\nThe final L matrix is\n:')
-    Scrolledtext1.insert(tk.INSERT,np.tril(A))
-    Scrolledtext1.insert(tk.INSERT,'\nThe final U matrix is\n:')
-    Scrolledtext1.insert(tk.INSERT,np.triu(A))
-    LU = A
-    z = auxiliary.forwarsRows(LU, b)
-    x = auxiliary.backwardsRows(LU, z)
-    return x # (if you want)
+    Scrolledtext1.insert(tk.INSERT,'\nThe final matrix A is (both L and U are stored in A to optimize space consumption)\n:')
+    Scrolledtext1.insert(tk.INSERT,A)
 
-
+    return A
 
 
 
@@ -60,7 +54,10 @@ def solveLUSimple(mat,coef,Scrolledtext1):
     aux=auxiliary.from_vector(coef)
     b=np.array(aux,dtype=float)
     A=np.array(mat,dtype=float)
-    x = luFactor(A, b,Scrolledtext1)
+    LU = luFactor(A, b,Scrolledtext1)
+    y = auxiliary.ufsub(LU, b)
+    x = auxiliary.bsub(LU, y)
+    Scrolledtext1.insert(tk.INSERT, '\nThe final solution is :\n')
     Scrolledtext1.insert(tk.INSERT,x)
 
 # if __name__ == '__main__':

@@ -90,3 +90,18 @@ def swapRows(arr, start_index, last_index):
     arr[[start_index, last_index]] = arr[[last_index, start_index]]
     return arr
 
+def ufsub(L,b):
+    """ Unit row oriented forward substitution """
+    for i in range(L.shape[0]):
+        for j in range(i):
+            b[i] -= L[i,j]*b[j]
+    return b
+
+
+def bsub(U,y):
+    """ Row oriented backward substitution """
+    for i in range(U.shape[0]-1,-1,-1):
+        for j in range(i+1, U.shape[1]):
+            y[i] -= U[i,j]*y[j]
+        y[i] = y[i]/U[i,i]
+    return y
