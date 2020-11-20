@@ -51,12 +51,11 @@ def newton(x,f, x0, tol, n,Scrolledtext1):
           .format(i, float(x0), float(fx), float(er)))
 
     if fx== 0:
-        Scrolledtext1.insert(tk.INSERT,"%x0 Es raíz"%x0)
+        Scrolledtext1.insert(tk.INSERT,"%.15f Es raíz"%x0)
     elif er <= tol:
-        Scrolledtext1.insert(tk.INSERT,' %f es aproximación a una raíz con tolerancia %f' %(x1,tol))
+        Scrolledtext1.insert(tk.INSERT,' %.15f es aproximación a una raíz con tolerancia %f' %(x1,tol))
     elif dfx == 0:
-        Scrolledtext1.insert(tk.INSERT,'%f es una posible raíz multiple'%x1)
+        Scrolledtext1.insert(tk.INSERT,'%.15f es una posible raíz multiple'%x1)
     else:
         Scrolledtext1.insert(tk.INSERT,'El método fracasó con %d iteraciones' % i)
 
-    sp.plot(f, (x, inicial, x0 + n * tol))

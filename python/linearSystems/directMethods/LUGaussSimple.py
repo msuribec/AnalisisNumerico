@@ -43,8 +43,10 @@ def luFactor(A,b,Scrolledtext1):
                 A[i,j] -= A[i,k]*A[k,j] # " U[i,j] -= L[i,k]*A[k,j] "
                 Scrolledtext1.insert(tk.INSERT,'\nU(%d,%d) = %f \n' % (i,j, A[i, j]))
 
-    Scrolledtext1.insert(tk.INSERT,'\nThe final matrix A is (both L and U are stored in A to optimize space consumption)\n:')
-    Scrolledtext1.insert(tk.INSERT,A)
+    Scrolledtext1.insert(tk.INSERT,'\nThe final matrix L is \n:')
+    Scrolledtext1.insert(tk.INSERT,np.tril(A))
+    Scrolledtext1.insert(tk.INSERT, '\nThe final matrix U is \n:')
+    Scrolledtext1.insert(tk.INSERT, np.triu(A))
 
     return A
 

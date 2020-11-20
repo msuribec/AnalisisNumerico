@@ -53,14 +53,13 @@ def rmult(x,f,x0,nIterations,tolerance,Scrolledtext1):
           .format(cont, float(x0), float(fx), float(err)))
     # RESULT
     if (fx == 0):
-        Scrolledtext1.insert(tk.INSERT, "%f Es una raíz"%x0)
+        Scrolledtext1.insert(tk.INSERT, "%.15f Es una raíz"%x0)
     else:
         if (err < tolerance):
-            Scrolledtext1.insert(tk.INSERT,"%f Es aproximación a una raíz con tolerancia de %f"%(x1,tolerance))
+            Scrolledtext1.insert(tk.INSERT,"%.15f Es aproximación a una raíz con tolerancia de %f"%(x1,tolerance))
         else:
             if (denominator == 0):
                 Scrolledtext1.insert(tk.INSERT,"Se encontró una división por 0")
             else:
                 Scrolledtext1.insert(tk.INSERT,"El método fracasó brutalmente con %d iteraaciones" %nIterations)
 
-    sp.plot(f, (x, inicial, x0 + nIterations * tolerance))

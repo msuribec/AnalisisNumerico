@@ -37,13 +37,13 @@ def busquedasIncrementales(x,f, x0, tol, n,Scrolledtext1):
                   .format(i, float(x0), float(x1), float(fx), float(fx1), float(fx * fx1)))
         if fx * fx1 == 0:
             if fx == 0:
-                Scrolledtext1.insert(tk.INSERT,' %f es raíz.'%x0)
+                Scrolledtext1.insert(tk.INSERT,' %.15f es raíz.'%x0)
             else:
-                Scrolledtext1.insert(tk.INSERT, '%f es raíz.'%f)
+                Scrolledtext1.insert(tk.INSERT, '%.15f es raíz.'%f)
         elif fx * fx1 < 0:
             Scrolledtext1.insert(tk.INSERT,'Hay una raíz entre %.15f y %.15f, iteracion %d'%(x0,x1,i))
         else:
             Scrolledtext1.insert(tk.INSERT,'El método fracasó con %d iteraciones.'%i)
 
 
-        sp.plot(f, (x, inicial, x1 + n * tol))
+        sp.plot(f, (x, inicial, x1))

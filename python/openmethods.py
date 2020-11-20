@@ -78,7 +78,7 @@ class Toplevel1:
         self.choiceInteg = ttk.Combobox(top)
         self.choiceInteg.place(relx=0.266, rely=0.06, relheight=0.039
                 , relwidth=0.376)
-        self.value_list = ['Fixed Point','Newton','Secant','Multiple roots','Incremental searches',]
+        self.value_list = ['Fixed Point', 'Newton', 'Secant', 'Multiple roots', 'Incremental searches and graphing', ]
         self.choiceInteg.configure(values=self.value_list)
         self.choiceInteg.configure(textvariable=openmethods_support.combobox)
         self.choiceInteg.configure(takefocus="")
@@ -374,7 +374,7 @@ def _on_shiftmouse(event, widget):
 
 def Cat_callback(self, event=None):
     k = self.choiceInteg.get()
-    ops = ['Fixed Point', 'Newton', 'Secant', 'Multiple roots', 'Incremental searches', ]
+    ops = ['Fixed Point', 'Newton', 'Secant', 'Multiple roots', 'Incremental searches and graphing', ]
     if k == ops[0]:
         self.x1Entry.config(state='disabled')
         self.gEntry_1.config(state='normal')

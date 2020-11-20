@@ -51,8 +51,10 @@ def luFactorPartial(A,Scrolledtext1):
                 A[i,j] -= A[i,k]*A[k,j]
                 Scrolledtext1.insert(tk.INSERT,'U(%d,%d) = %f \n' % (i, j, A[i, j]))
 
-    Scrolledtext1.insert(tk.INSERT,'\nThe final matrix (elements above the diagonal are L and below are U)\n:')
-    Scrolledtext1.insert(tk.INSERT,np.array(A))
+    Scrolledtext1.insert(tk.INSERT, '\nThe final matrix L is \n:')
+    Scrolledtext1.insert(tk.INSERT, np.tril(A))
+    Scrolledtext1.insert(tk.INSERT, '\nThe final matrix U is \n:')
+    Scrolledtext1.insert(tk.INSERT, np.triu(A))
 
     return [A,marks]
 

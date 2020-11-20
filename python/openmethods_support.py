@@ -54,7 +54,7 @@ def runMethod(choiceInteg, fEntry, gEntry_1, x0Entry, x1Entry, iterationsEntry, 
     x0 = float(x0Entry.get())
     tol = float(tolEntry.get())
     iter_max = int(iterationsEntry.get())
-    ops= ['Fixed Point','Newton','Secant','Multiple roots','Incremental searches',]
+    ops = ['Fixed Point', 'Newton', 'Secant', 'Multiple roots', 'Incremental searches and graphing', ]
     x=sp.Symbol('x')
     if k == ops[0]:
         strg = gEntry_1.get()

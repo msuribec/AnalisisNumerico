@@ -41,11 +41,11 @@ def secant(x, f, x0, x1, n, tol,Scrolledtext1):
         Scrolledtext1.insert(tk.INSERT,"i:{:03d} x: {:.10f} fx: {:.10f} error abs: {:.10f} \n"
               .format(i + 1, float(x1), float(fx1), float(er)))
         if fx1 == 0:
-            Scrolledtext1.insert(tk.INSERT,float(x1) + "%f Es raíz"%x1)
+            Scrolledtext1.insert(tk.INSERT,"%.15f Es raíz"%x1)
         elif er < tol:
-            Scrolledtext1.insert(tk.INSERT,'%f es aproximación a una raíz con tolerancia %f'%(x1,tol))
+            Scrolledtext1.insert(tk.INSERT,'%.15f es aproximación a una raíz con tolerancia %.15f'%(x1,tol))
         elif den == 0:
-            Scrolledtext1.insert(tk.INSERT,'%f es una posible raíz multiple'%x1)
+            Scrolledtext1.insert(tk.INSERT,'%.15f es una posible raíz multiple'%x1)
         else:
             Scrolledtext1.insert(tk.INSERT,'El método fracasó con %d iteraciones.'%i)
-        sp.plot(f, (x, inicial, x1 + n * tol))
+

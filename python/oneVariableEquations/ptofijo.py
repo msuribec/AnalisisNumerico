@@ -28,13 +28,13 @@ def puntofijo(x,f,g,x0,nIterations,tolerance,Scrolledtext1):
         err = abs(xn - x0)
         x0 = xn
         cont = cont + 1
-    Scrolledtext1.insert(tk.INSERT,"i:{:03d} x: {:.10f} fx: {:.10f} error abs: {:.10f} \n"
+
+    Scrolledtext1.insert(tk.INSERT,"i:{:03d} x: {:.10f} fx: {:.10f} error abs: {:.15f} \n"
           .format(cont, float(x0), float(fx), float(err)))
     if (fx == 0):
-        Scrolledtext1.insert(tk.INSERT,"%f Es raíz"%x0)
+        Scrolledtext1.insert(tk.INSERT,"%.15f Es raíz"%x0)
     else:
         if (err <= tolerance):
-            Scrolledtext1.insert(tk.INSERT," %f Es aproximación a una raíz con una tolerancia de %f"%(x0,tolerance))
+            Scrolledtext1.insert(tk.INSERT," %.15f Es aproximación a una raíz con una tolerancia de %.15f"%(x0,tolerance))
         else:
             Scrolledtext1.insert(tk.INSERT,"El método fracasó con % iteraciones" %nIterations)
-    sp.plot(f, (x, inicial, x0 + nIterations * tolerance))

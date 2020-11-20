@@ -29,22 +29,35 @@ def divDiffNewton(x, y):
         p[k] = A[k, k + 1]
     return A,p
 
-def interpolate_newton(x,y):
-    xpt = array(x)
-    ypt = array(y)
-    A, p = divDiffNewton(xpt, ypt)
-    set_printoptions(suppress=True)
-    str=array_str(A,precision=5)
-    return str
-
 def interpolate_newtonGUI(x,y,Scrolledtext1):
     xpt = array(x)
     ypt = array(y)
     A, p = divDiffNewton(xpt, ypt)
     set_printoptions(suppress=True)
     Scrolledtext1.insert(tk.INSERT, 'The divided differences table is:\n')
-    str=array_str(A,precision=5)
-    Scrolledtext1.insert(tk.INSERT, str)
+
+    Scrolledtext1.insert(tk.INSERT,'\n'.join(['     '.join(['{:4}'.format(item) for item in row])
+                     for row in A]))
+    Scrolledtext1.insert(tk.INSERT, '\nThe polynomial is:\n')
+    i=0
+    grado = len(xpt)-1
+    for line in A:
+        if i==0:
+            Scrolledtext1.insert(tk.INSERT, line[i + 1])
+            Scrolledtext1.insert(tk.INSERT, ' + \n')
+        elif i==grado:
+            Scrolledtext1.insert(tk.INSERT, line[i + 1])
+
+            for j in range(0, i):
+
+                Scrolledtext1.insert(tk.INSERT, '   (x - %.15f) ' % xpt[j])
+        else:
+            Scrolledtext1.insert(tk.INSERT, line[i + 1])
+            for j in range(0,i):
+                Scrolledtext1.insert(tk.INSERT, '   (x - %.15f) '%xpt[j])
+            Scrolledtext1.insert(tk.INSERT, '+ \n')
+        i=i+1
+
 
 
 

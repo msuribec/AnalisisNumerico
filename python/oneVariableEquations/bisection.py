@@ -39,15 +39,17 @@ def bisection(x,f, a, b, tol, iter_max,Scrolledtext1):
         print (a,' es raíz.')
     else:
         if fa * fb > 0:
-            raise ('La función tiene el mismo signo en a y en b. ')
+            Scrolledtext1.insert(tk.INSERT,'La función tiene el mismo signo en a y en b. ')
         else:
             i=1
             xm = (a + b) / 2
             fxm = f.subs(x,xm)
             er = b - a
+            Scrolledtext1.insert(tk.INSERT,
+                                 "i: {:03d} xi: {:+.10f} xm: {:+.10f} xf: {:+.10f} f(xi): {:+.10f} f(xm): {:+.10f} f(xf): {:+.10f} eabs: {:+.10f}\n"
+                                 .format(i, float(a), float(xm), float(b), float(fa), float(fxm), float(fb), float(er)))
             while i < iter_max and er > tol and fxm != 0:
-                Scrolledtext1.insert(tk.INSERT,"i: {:03d} xi: {:+.10f} xm: {:+.10f} xf: {:+.10f} f(xi): {:+.10f} f(xm): {:+.10f} f(xf): {:+.10f} eabs: {:+.10f}\n"
-                .format(i, float(a), float(fa), float(xm), float(fxm), float(b), float(fb), float(er)))
+
                 if fxm == 0.0: # % solved the equation exactly
                     a = xm
                     b = xm
@@ -63,15 +65,15 @@ def bisection(x,f, a, b, tol, iter_max,Scrolledtext1):
                 fxm = f.subs(x,xm)
                 er = abs(b-a)
                 i = i+1
-            Scrolledtext1.insert(tk.INSERT,"i: {:03d} xi: {:+.10f} xm: {:+.10f} xf: {:+.10f} f(xi): {:+.10f} f(xm): {:+.10f} f(xf): {:+.10f} eabs: {:+.10f}\n"
-                .format(i, float(a), float(fa), float(xm), float(fxm), float(b), float(fb), float(er)))
+                Scrolledtext1.insert(tk.INSERT,"i: {:03d} xi: {:+.10f} xm: {:+.10f} xf: {:+.10f} f(xi): {:+.10f} f(xm): {:+.10f} f(xf): {:+.10f} eabs: {:+.10f}\n"
+                                 .format(i, float(a), float(xm), float(b), float(fa), float(fxm), float(fb), float(er)))
 
             if fxm == 0:
-                Scrolledtext1.insert(tk.INSERT,' %f es raíz.'%xm)
+                Scrolledtext1.insert(tk.INSERT,' %.15f es raíz.'%xm)
                 converged = True
             else:
                 if er < tol:
-                    Scrolledtext1.insert(tk.INSERT,'%f es aproximación a una raíz con tolerancia %f' %(xm,tol))
+                    Scrolledtext1.insert(tk.INSERT,'%.15f es aproximación a una raíz con tolerancia %.15f' %(xm,tol))
                     converged = True
                 else:
                     Scrolledtext1.insert(tk.INSERT,'El método fracasó con ' + str(i) + 'iteraciones.')

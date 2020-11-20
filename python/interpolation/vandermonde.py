@@ -35,6 +35,7 @@ def makeVandermondeMatrix(x):
         for j in range(len_x):
             V[i][j] = x[i] ** (grado - j)
     return V
+
 def vanderMondeGUI(x,y,Scrolledtext1):
     Scrolledtext1.insert(tk.INSERT, 'The vandermonde system is :\n')
     V=makeVandermondeMatrix(x)
@@ -43,9 +44,18 @@ def vanderMondeGUI(x,y,Scrolledtext1):
         Scrolledtext1.insert(tk.INSERT, np.array(line))
         Scrolledtext1.insert(tk.INSERT, '[' + str(y[i]) + ']\n')
         i=i+1
-    Scrolledtext1.insert(tk.INSERT, 'The coefficients for the polynomial in descending order are :\n')
+    Scrolledtext1.insert(tk.INSERT, 'The polynomial is:\n')
     sol=np.linalg.solve(np.array(V),np.array(y))
-    Scrolledtext1.insert(tk.INSERT, sol)
+    grado = len(x) - 1
+    k=0
+    for elem in sol:
+        if grado-k==0:
+            Scrolledtext1.insert(tk.INSERT, '%.15f'%elem)
+        else:
+            Scrolledtext1.insert(tk.INSERT, '%.15f x^%d   +  ' % (elem, grado - k))
+
+        k=k+1
+
 
 # if __name__ == '__main__':
 #     # x = [-2.0, -1.0, 2.0,3.0]
