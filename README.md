@@ -65,17 +65,20 @@ If the chosen method is one of the generalized methods, the user must
 choose the number of intervals (must be an integer and in the case of
 generalized simpson 1/3 it must be even).
 
+![Window for the integration methods ](https://i.imgur.com/qGusBbB.png)
+
 Examples of functions are
 
 -   $e^{x}$ is written as
 
 -   $x^2 -4 $ is written as
 
-![Example of input for the trapezoid method, the function is
-$f(x)=x^2-4$](https://i.imgur.com/Zpv7ThD.png)
+
+
+![Example of input for the trapezoid method, the function is $f(x)=x^2-4$](https://i.imgur.com/Zpv7ThD.png)
 
 ![Example of input for the generalized trapezoid method, the function is
-$f(x)=x^2-4$](https://i.imgur.com/qGusBbB.png)
+$f(x)=x^2-4$](https://i.imgur.com/nRUAcjW.png)
 
 
 Interpolation
