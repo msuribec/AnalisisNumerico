@@ -38,7 +38,7 @@ Interacting with the main window
 --------------------------------
 
 The main menu of the app can be accessed by running
-the**NumericalAnalysisGUI.py** module in the python project folder.
+the **NumericalAnalysisGUI.py** module in the python project folder.
 
 This will prompt the main menu.The main menu has 6 buttons, one for each
 type of method.
