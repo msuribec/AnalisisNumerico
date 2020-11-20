@@ -1,9 +1,6 @@
 # Numerical analysis
 
-Repository Address
-==================
-
-https://github.com/msuribec/AnalisisNumerico
+A pdf version of this user manual is available in this repository.
 
 Members
 =======
@@ -185,11 +182,11 @@ Examples of functions are
 
 ### Bracketing methods
 
-![Window for bracketing methods](https://i.imgur.com/ZcK108H.png)
-[fig:tarea1activo1]
+![Window for bracketing methods](https://i.imgur.com/ZcK108H.png "Window for bracketing methods" )
+
 
 ![Example of input for the bisection method](https://i.imgur.com/yAESoMJ.png)
-[fig:tarea1activo1]
+
 
 ### Open methods
 
