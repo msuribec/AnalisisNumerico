@@ -69,16 +69,16 @@ generalized simpson 1/3 it must be even).
 
 Examples of functions are
 
--   $e^{x}$ is written as
+-   e^{x} is written as
 
--   $x^2 -4 $ is written as
+-   x^2 -4  is written as
 
 
 
-![Example of input for the trapezoid method, the function is $f(x)=x^2-4$](https://i.imgur.com/Zpv7ThD.png)
+![Example of input for the trapezoid method, the function is f(x)=x^2-4](https://i.imgur.com/Zpv7ThD.png)
 
 ![Example of input for the generalized trapezoid method, the function is
-$f(x)=x^2-4$](https://i.imgur.com/nRUAcjW.png)
+f(x)=x^2-4](https://i.imgur.com/nRUAcjW.png)
 
 
 Interpolation
@@ -92,8 +92,8 @@ divided differences method and the Lagrange method.
 For each method the user must input the x values and the y values
 separated by a comma. e
 
-For example, to interpolate the points $(1,1),(2,4),(3,9)$ the x values
-must be entered as $1,2,3$ and the y values as $1,4,9$
+For example, to interpolate the points (1,1),(2,4),(3,9) the x values
+must be entered as 1,2,3 and the y values as 1,4,9
 
 ![Window for interpolation methods](https://i.imgur.com/ZzTEg6f.png)
 
@@ -117,23 +117,19 @@ factorization and Doolittle factorization
 
 For each method the user must input the coefficient matrix A(all
 elements separated by a comma) and the vector of independent terms b to
-solve the system (all elements separated by a comma)$Ax=b$
+solve the system (all elements separated by a comma)Ax=b
 
-For example, the matrix $A=\begin{bmatrix}
-  129 & 163 & 70\\ 
-  195 & 142 & 156\\
-  357 & 300 & 276
-\end{bmatrix}$.
+For example, the matrix
 
-must be entered as $ 129,163,70,195,142,156,357,300,276$
+![Example of matrix a](https://i.imgur.com/jAjoUxB.png) 
 
-and the vector $b=\begin{bmatrix}
-  10 \\ 
-  33 \\
-  43
-\end{bmatrix}$.
+must be entered as  129,163,70,195,142,156,357,300,276
 
-must be entered as $ 10,33,43$
+and the vector 
+
+![Example of vector b ](https://i.imgur.com/ZT0vjTP.png) 
+
+must be entered as  10,33,43
 
 ![Window for Systems of equations with direct methods](https://i.imgur.com/4zZZRlH.png) 
 
@@ -148,26 +144,21 @@ to run.The options are Jacobi and Gauss Seidel.
 
 For each method the user must input the coefficient matrix A(all
 elements separated by a comma) and the vector of independent terms b to
-solve the system (all elements separated by a comma)$Ax=b$. Additionally
+solve the system (all elements separated by a comma)Ax=b. Additionally
 the user must enter the number of maximum iterations (must be an
 integer) and the tolerance(float with dot as a decimal separator).
 
-For example, the matrix $A=\begin{bmatrix}
-  129 & 163 & 70\\ 
-  195 & 142 & 156\\
-  357 & 300 & 276
-\end{bmatrix}$.
+For example, the matrix
 
-must be entered as $ 129,163,70
-  ,195,142,156,357,300,276$
+![Example of matrix a](https://i.imgur.com/jAjoUxB.png) 
 
-and the vector $b=\begin{bmatrix}
-  10 \\ 
-  33 \\
-  43
-\end{bmatrix}$.
+must be entered as  129,163,70,195,142,156,357,300,276
 
-must be entered as $ 10,33,43$
+and the vector 
+
+![Example of vector b ](https://i.imgur.com/ZT0vjTP.png) 
+
+must be entered as  10,33,43
 
 ![Window for Systems of equations with iterative
 methods](https://i.imgur.com/ZyMJViw.png) 
@@ -188,9 +179,9 @@ tolerance(float with dot as a decimal separator).
 
 Examples of functions are
 
--   $e^{x}$ is written as
+-   e^{x} is written as
 
--   $x^2 -4 $ is written as
+-   x^2 -4  is written as
 
 ### Bracketing methods
 
@@ -212,11 +203,11 @@ case the user wants to use it to find an initial approximation for the
 other methods)
 
 For each method the user must input a function f, the value of the
-initial approximation,$x_0$,the number of maximum iterations (must be an
+initial approximation,x_0,the number of maximum iterations (must be an
 integer) and the tolerance(float with dot as a decimal separator).
 
 For the fixed point method, there is an additional function g that is
-needed. For the secant method an additional initial value $x_1$, is
+needed. For the secant method an additional initial value x_1, is
 needed.
 
 These fields will only be available when the respective methods are
@@ -224,9 +215,9 @@ chosen, otherwise they will be disabled to avoid confusion
 
 Examples of functions are
 
--   $e^{x}$ is written as
+-   e^{x} is written as
 
--   $x^2 -4 $ is written as
+-   x^2 -4  is written as
 
 ![Window for equations of one variable with open
 methods](https://i.imgur.com/MWiu81J.png)
