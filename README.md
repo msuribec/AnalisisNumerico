@@ -69,7 +69,7 @@ generalized simpson 1/3 it must be even).
 
 Examples of functions are
 
--   e^{x} is written as
+-   e^x is written as
 
 -   x^2 -4  is written as
 
@@ -179,7 +179,7 @@ tolerance(float with dot as a decimal separator).
 
 Examples of functions are
 
--   e^{x} is written as
+-   e^x is written as
 
 -   x^2 -4  is written as
 
@@ -215,7 +215,7 @@ chosen, otherwise they will be disabled to avoid confusion
 
 Examples of functions are
 
--   e^{x} is written as
+-   e^x is written as
 
 -   x^2 -4  is written as
 
