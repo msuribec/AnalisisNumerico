@@ -46,7 +46,7 @@ type of method.
 The user must choose the type of method they want to try.
 
 ![Main menu](https://i.imgur.com/aBUWSKB.png) 
-
+Main menu
 Integration methods
 -------------------
 
@@ -63,7 +63,7 @@ choose the number of intervals (must be an integer and in the case of
 generalized simpson 1/3 it must be even).
 
 ![Window for the integration methods ](https://i.imgur.com/qGusBbB.png)
-
+Window for the integration methods 
 Examples of functions are
 
 -   e^x is written as
@@ -73,10 +73,11 @@ Examples of functions are
 
 
 ![Example of input for the trapezoid method, the function is f(x)=x^2-4](https://i.imgur.com/Zpv7ThD.png)
+Example of input for the trapezoid method, the function is f(x)=x^2-4
 
-![Example of input for the generalized trapezoid method, the function is
-f(x)=x^2-4](https://i.imgur.com/nRUAcjW.png)
-
+![Example of input for the generalized trapezoid method, the function is f(x)=x^2-4](https://i.imgur.com/nRUAcjW.png)
+Example of input for the generalized trapezoid method, the function is
+f(x)=x^2-4
 
 Interpolation
 -------------
@@ -93,10 +94,10 @@ For example, to interpolate the points (1,1),(2,4),(3,9) the x values
 must be entered as 1,2,3 and the y values as 1,4,9
 
 ![Window for interpolation methods](https://i.imgur.com/ZzTEg6f.png)
-
+Window for interpolation methods
 
 ![Example of input for the Vandermonde method](https://i.imgur.com/4SXIl0B.png)
-
+Example of input for the Vandermonde method
 
 Systems of equations 
 ---------------------
@@ -129,9 +130,9 @@ and the vector
 must be entered as  10,33,43
 
 ![Window for Systems of equations with direct methods](https://i.imgur.com/4zZZRlH.png) 
-
+Window for Systems of equations with direct methods
 ![Example of input for the Cholesky method](https://i.imgur.com/mEmv1Ar.png)
-
+Example of input for the Cholesky method
 ### Iterative methods
 
 Clicking the Systems of equations with iterative methods button on the
@@ -161,7 +162,7 @@ must be entered as  10,33,43
 methods](https://i.imgur.com/ZyMJViw.png) 
 
 ![Example of input for the jacobi method](https://i.imgur.com/psIWvnG.png)
-
+Example of input for the jacobi method
 Equations of one variable
 -------------------------
 
@@ -183,10 +184,10 @@ Examples of functions are
 ### Bracketing methods
 
 ![Window for bracketing methods](https://i.imgur.com/ZcK108H.png "Window for bracketing methods" )
-
+Window for bracketing methods
 
 ![Example of input for the bisection method](https://i.imgur.com/yAESoMJ.png)
-
+Example of input for the bisection method
 
 ### Open methods
 
@@ -216,10 +217,10 @@ Examples of functions are
 
 -   x^2 -4  is written as
 
-![Window for equations of one variable with open
-methods](https://i.imgur.com/MWiu81J.png)
-
+![Window for equations of one variable with open methods](https://i.imgur.com/MWiu81J.png)
+Window for equations of one variable with open methods
 ![Example of input for the fixed point method](https://i.imgur.com/DhMutiy.png)
-
+Example of input for the fixed point method
 
 ![Example of input for the secant method](https://i.imgur.com/Rtk0QgG.png)
+Example of input for the secant method
