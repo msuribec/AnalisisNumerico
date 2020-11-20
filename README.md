@@ -48,7 +48,7 @@ type of method.
 
 The user must choose the type of method they want to try.
 
-![Main menu](capturegral.png "fig:") [fig:menuPpal]
+![Main menu](https://i.imgur.com/aBUWSKB.png) 
 
 Integration methods
 -------------------
@@ -72,14 +72,11 @@ Examples of functions are
 -   $x^2 -4 $ is written as
 
 ![Example of input for the trapezoid method, the function is
-$f(x)=x^2-4$](ExampleIntegNormal.PNG)
-
-[fig:tarea1activo1]
+$f(x)=x^2-4$](https://i.imgur.com/Zpv7ThD.png)
 
 ![Example of input for the generalized trapezoid method, the function is
-$f(x)=x^2-4$](ExampleIntegGen.PNG)
+$f(x)=x^2-4$](https://i.imgur.com/qGusBbB.png)
 
-[fig:tarea1activo1]
 
 Interpolation
 -------------
@@ -95,13 +92,11 @@ separated by a comma. e
 For example, to interpolate the points $(1,1),(2,4),(3,9)$ the x values
 must be entered as $1,2,3$ and the y values as $1,4,9$
 
-![Window for interpolation methods](captureMenuInterpol.png)
+![Window for interpolation methods](https://i.imgur.com/ZzTEg6f.png)
 
-[fig:tarea1activo1]
 
-![Example of input for the Vandermonde method](ExampleInterpol.PNG)
+![Example of input for the Vandermonde method](https://i.imgur.com/4SXIl0B.png)
 
-[fig:tarea1activo1]
 
 Systems of equations 
 ---------------------
@@ -137,12 +132,9 @@ and the vector $b=\begin{bmatrix}
 
 must be entered as $ 10,33,43$
 
-![Window for Systems of equations with direct
-methods](captureMenuDirect.png "fig:") [fig:tarea1activo1]
+![Window for Systems of equations with direct methods](https://i.imgur.com/4zZZRlH.png) 
 
-![Example of input for the Cholesky method](ExampleDirect.PNG)
-
-[fig:tarea1activo1]
+![Example of input for the Cholesky method](https://i.imgur.com/mEmv1Ar.png)
 
 ### Iterative methods
 
@@ -175,10 +167,9 @@ and the vector $b=\begin{bmatrix}
 must be entered as $ 10,33,43$
 
 ![Window for Systems of equations with iterative
-methods](captureMenuIterative.png "fig:") [fig:tarea1activo1]
+methods](https://i.imgur.com/ZyMJViw.png) 
 
-![Example of input for the jacobi method](ExampleIterative.PNG "fig:")
-[fig:tarea1activo1]
+![Example of input for the jacobi method](https://i.imgur.com/psIWvnG.png)
 
 Equations of one variable
 -------------------------
@@ -200,10 +191,10 @@ Examples of functions are
 
 ### Bracketing methods
 
-![Window for bracketing methods](captureMenuBracketing.png "fig:")
+![Window for bracketing methods](https://i.imgur.com/ZcK108H.png)
 [fig:tarea1activo1]
 
-![Example of input for bracketing methods](ExampleBracketing.png "fig:")
+![Example of input for the bisection method](https://i.imgur.com/yAESoMJ.png)
 [fig:tarea1activo1]
 
 ### Open methods
@@ -235,10 +226,9 @@ Examples of functions are
 -   $x^2 -4 $ is written as
 
 ![Window for equations of one variable with open
-methods](captureMenuOpen.png "fig:") [fig:tarea1activo1]
+methods](https://i.imgur.com/MWiu81J.png)
 
-![Example of input for the fixed point method](ExampleOpenFP.png "fig:")
-[fig:tarea1activo1]
+![Example of input for the fixed point method](https://i.imgur.com/DhMutiy.png)
 
-![Example of input for the secant method](ExampleOpenSecant.png "fig:")
-[fig:tarea1activo1]
+
+![Example of input for the secant method](https://i.imgur.com/Rtk0QgG.png)
